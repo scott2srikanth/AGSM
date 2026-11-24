@@ -1,0 +1,7 @@
+extends: [default.yaml, ../model/agsm_base.yaml]
+training:
+  batch_size: 32
+  mixed_precision: true
+tracking:
+  backend: wandb
+  mode: offline

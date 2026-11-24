@@ -1,0 +1,11 @@
+extends: agsm_tiny.yaml
+model:
+  vocab_size: 256
+  model_dim: 256
+  key_dim: 96
+  value_dim: 96
+  slow_state_dim: 256
+  controller_dim: 256
+  refinement_hidden_dim: 512
+  max_refinement_steps: 4
+  dropout: 0.1

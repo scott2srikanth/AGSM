@@ -1,0 +1,8 @@
+extends: ../training/default.yaml
+sweep:
+  A0: {model: {name: gru}}
+  transformer: {model: {name: transformer}}
+  A8: {model: {name: agsm_v2}}
+  mamba2: {model: {name: mamba2, model_dim: 128}}
+  rwkv7: {model: {name: rwkv7, model_dim: 128}}
+  gated_deltanet: {model: {name: gated_deltanet, model_dim: 128}}

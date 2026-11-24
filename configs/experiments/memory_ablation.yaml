@@ -1,0 +1,16 @@
+extends: ../training/default.yaml
+sweep:
+  A2: {memory: {type: fast}}
+  A3: {memory: {type: slow}}
+  A4:
+    controller: &fixed {adaptive_write: false, adaptive_retention: false, adaptive_update_strength: false, adaptive_slow_update: false, adaptive_retrieval: false, adaptive_halting: false}
+    model: {max_refinement_steps: 1}
+  A5:
+    controller: {<<: *fixed, adaptive_write: true}
+    model: {max_refinement_steps: 1}
+  A6:
+    controller: {<<: *fixed, adaptive_write: true, adaptive_retrieval: true}
+    model: {max_refinement_steps: 1}
+  A7:
+    controller: {<<: *fixed, adaptive_write: true, adaptive_retrieval: true, adaptive_halting: true}
+  A8: {}

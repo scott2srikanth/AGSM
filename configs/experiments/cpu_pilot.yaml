@@ -1,0 +1,13 @@
+extends: [baseline.yaml, memory_ablation.yaml, controller_ablation.yaml]
+training:
+  device: cpu
+  epochs: 3
+  batch_size: 16
+data:
+  sequence_length: 16
+  train_examples: 128
+  validation_examples: 64
+  test_examples: 64
+evaluation:
+  sequence_lengths: [16, 32, 128]
+  batch_size: 16

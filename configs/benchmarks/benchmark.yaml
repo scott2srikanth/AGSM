@@ -1,0 +1,6 @@
+extends: ../training/default.yaml
+benchmark:
+  batch_size: 1
+  lengths: [128, 512, 2048, 4096, 8192]
+  warmup: 2
+  repeats: 7

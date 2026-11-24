@@ -1,0 +1,12 @@
+extends: colab.yaml
+model: {task: language_model, vocab_size: 256, output_dim: 256}
+data:
+  name: wikitext103
+  revision: set-upstream-revision
+  paths:
+    train: datasets/wikitext103/wiki.train.raw
+    validation: datasets/wikitext103/wiki.valid.raw
+    test: datasets/wikitext103/wiki.test.raw
+  sequence_length: 256
+evaluation:
+  sequence_lengths: [256, 512, 1024]

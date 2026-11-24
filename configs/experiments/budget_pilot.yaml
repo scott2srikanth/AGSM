@@ -1,0 +1,12 @@
+extends: capacity.yaml
+training:
+  device: cpu
+  epochs: 1
+  batch_size: 4
+data:
+  sequence_length: 8
+  train_examples: 8
+  validation_examples: 4
+  test_examples: 4
+evaluation:
+  sequence_lengths: [8, 16]

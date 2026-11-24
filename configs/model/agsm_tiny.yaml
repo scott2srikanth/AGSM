@@ -1,0 +1,28 @@
+model:
+  name: agsm_v2
+  vocab_size: 64
+  model_dim: 32
+  key_dim: 16
+  value_dim: 16
+  slow_state_dim: 32
+  controller_dim: 32
+  refinement_hidden_dim: 64
+  max_refinement_steps: 3
+  dropout: 0.0
+  task: retrieval
+memory:
+  type: dual
+  normalize_keys: true
+  read_before_write: true
+  update_precision: float32
+  norm_clipping: true
+  norm_limit: 16.0
+controller:
+  adaptive_write: true
+  adaptive_retention: true
+  adaptive_retrieval: true
+  adaptive_slow_update: true
+  adaptive_update_strength: true
+  adaptive_halting: true
+  residual_signal: true
+  memory_norm_signal: true

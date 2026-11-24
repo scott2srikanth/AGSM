@@ -1,0 +1,14 @@
+extends: default.yaml
+model: {task: classification, vocab_size: 16, output_dim: 10}
+data:
+  name: listops
+  revision: set-upstream-revision
+  paths:
+    train: datasets/listops/train.tsv
+    validation: datasets/listops/validation.tsv
+    test: datasets/listops/test.tsv
+  sequence_length: 2048
+evaluation:
+  sequence_lengths: [2048]
+training:
+  batch_size: 4

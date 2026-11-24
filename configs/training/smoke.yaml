@@ -1,0 +1,12 @@
+extends: default.yaml
+training:
+  device: cpu
+  epochs: 2
+  batch_size: 4
+data:
+  sequence_length: 8
+  train_examples: 12
+  validation_examples: 8
+  test_examples: 8
+evaluation:
+  sequence_lengths: [8, 16]

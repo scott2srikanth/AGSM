@@ -1,0 +1,6 @@
+extends: ../training/default.yaml
+sweep:
+  A8: {}
+  A9: {controller: {residual_signal: false}}
+  A10: {controller: {adaptive_halting: false}}
+  A11: {loss: {write_weight: 0.0}}
