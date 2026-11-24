@@ -28,7 +28,7 @@ Use a fresh output directory for each configuration and seed. The experiment com
 
 ## Colab
 
-Open [environment setup](notebooks/01_environment_setup.ipynb) and [AGSM training](notebooks/03_agsm_training.ipynb) from a GitHub checkout in Colab. Select a GPU runtime and enter your repository's clone URL and a commit or tag. Training saves checkpoint epochs to Google Drive and resumes from the latest readable epoch when you reuse the run name and resolved configuration. A runtime without CUDA uses CPU smoke settings.
+Open [environment setup](notebooks/01_environment_setup.ipynb) and [AGSM training](notebooks/03_agsm_training.ipynb) from a GitHub checkout in Colab. Select a GPU runtime. The setup cell checks out a CI-verified AGSM commit by default. Training saves checkpoint epochs to Google Drive and resumes from the latest readable epoch when you reuse the run name and resolved configuration. A runtime without CUDA uses CPU smoke settings.
 
 ## Documentation
 

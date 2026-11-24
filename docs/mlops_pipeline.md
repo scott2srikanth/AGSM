@@ -8,7 +8,7 @@ Push a version tag such as `v0.1.0` to trigger a GitHub release for the source d
 
 ## Colab and restart safety
 
-Enter a source URL and pinned commit in the notebook, mount Drive, and choose a unique run name. Notebook 03 uses the base training preset and offline W&B. For online tracking, change the resolved tracking mode and load `WANDB_API_KEY` from Colab Secrets before launching the subprocess. Keep credentials out of YAML.
+The notebooks default to the AGSM GitHub repository and a CI-verified commit. Set `AGSM_REPO_URL` and `AGSM_GIT_REF` before running setup to override those defaults. Mount Drive and choose a unique run name. Notebook 03 uses the base training preset and offline W&B. For online tracking, change the resolved tracking mode and load `WANDB_API_KEY` from Colab Secrets before launching the subprocess. Keep credentials out of YAML.
 
 A checkpoint includes resolved settings, model, optimizer, scheduler, mixed-precision scaler, RNG state, metric history, best weights, and early-stopping counters. Checkpoints are atomically replaced at saved epoch boundaries. Restart with the same settings, hardware mode, source revision, and output path. A disconnect can require replaying unsaved epochs. If the latest file is unreadable, resume scans older saved epochs.
 
